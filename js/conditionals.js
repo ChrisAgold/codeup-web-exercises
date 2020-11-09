@@ -152,7 +152,7 @@ function calculateTotal(num, total) {
                 return "You get it for free!";
             }
         }
-        console.log(calculateTotal(total));
+        //console.log(calculateTotal(total));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
