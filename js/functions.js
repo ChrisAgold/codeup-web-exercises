@@ -8,10 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
-    return "Hello, " + name + "!";
-}
-console.log(sayHello("codeup"));
+// function sayHello(name) {
+//     return "Hello, " + name + "!";
+// }
+// console.log(sayHello("codeup"));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -23,8 +23,8 @@ console.log(sayHello("codeup"));
 //     var name = "chris";
 //     return name;
 // }
-var helloMessage = sayHello("Chris");
-console.log(helloMessage);
+// var helloMessage = sayHello("Chris");
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -33,8 +33,8 @@ console.log(helloMessage);
  * console.
  */
 
-var myName = "Chris";
-console.log(sayHello(myName));
+// var myName = "Chris";
+// console.log(sayHello(myName));
 // function sayHello(name) {
 //     return sayHello("Hello," + name);
 // }
@@ -47,7 +47,7 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var random = Math.floor((Math.random() * 3) + 1);
 
 
 /**
@@ -68,20 +68,20 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(num) {
-        console.log("My random number is, " + num);
-    if (num == 2) {
-        console.log("true");
-    } else {
-        console.log("false");
-
-    }
-}
-// return num == 2; alternative way to write it
-console.log(isTwo(random));
-console.log(isTwo(1));
-console.log(isTwo(2));
-console.log(isTwo(3));
+// function isTwo(num) {
+//         console.log("My random number is, " + num);
+//     if (num == 2) {
+//         console.log("true");
+//     } else {
+//         console.log("false");
+//
+//     }
+// }
+// // return num == 2; alternative way to write it
+// console.log(isTwo(random));
+// console.log(isTwo(1));
+// console.log(isTwo(2));
+// console.log(isTwo(3));
 
 
 
@@ -96,19 +96,19 @@ console.log(isTwo(3));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(x, y) {
-    return x * y;
-}
-console.log(calculateTip(.2, 20));
-/**
- * TODO:
- * Use prompt and alert in combination with your calculateTip function to
- * prompt the user for the bill total and a percentage they would like to tip,
- * then display the dollar amount they should tip
- */
-var bill = window.prompt("How much is the bill?");
-var tip = window.prompt("How would you like to tip?");
-alert("You should tip: " + "$" + bill * tip * 0.01);
+// function calculateTip(x, y) {
+//     return x * y;
+// }
+// console.log(calculateTip(.2, 20));
+// /**
+//  * TODO:
+//  * Use prompt and alert in combination with your calculateTip function to
+//  * prompt the user for the bill total and a percentage they would like to tip,
+//  * then display the dollar amount they should tip
+//  */
+// var bill = window.prompt("How much is the bill?");
+// var tip = window.prompt("How would you like to tip?");
+// alert("You should tip: " + "$" + bill * tip * 0.01);
 
 
 /**
@@ -128,7 +128,42 @@ alert("You should tip: " + "$" + bill * tip * 0.01);
 
 // var originalPrice = 100;
 // var discountPercent = 0.2;
-function applyDiscount(originalPrice, discountPercent) {
-    return originalPrice - (originalPrice * discountPercent);
-}
-console.log(applyDiscount(100, 0.2));
+// function applyDiscount(originalPrice, discountPercent) {
+//     return originalPrice - (originalPrice * discountPercent);
+// }
+// console.log(applyDiscount(100, 0.2));
+
+/******************************************************
+*If/Else
+ */
+// 'use strict';
+//
+// // var message;
+// // var success;
+// // if (success) {
+// //     message = "Operation was successful.";
+// // } else {
+// //     message = "Oops, something went wrong.";
+// // }
+// //
+// // console.log(message);
+// DONT UNDERSTAND EXAMPLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
