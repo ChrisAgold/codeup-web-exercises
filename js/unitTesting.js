@@ -9,6 +9,15 @@
 // }
 
 
+// describe("returnYellow", function() {
+//     it('should be a defined function', function () {
+//         expect(typeof returnYellow).toBe('function');
+//     });
+//     it('should return "yellow"', function() {
+//         expect(returnYellow()).toBe("yellow");
+//     });
+// });
+
 describe("returnYellow", function() {
     it('should be a defined function', function () {
         expect(typeof returnYellow).toBe('function');
@@ -17,5 +26,3 @@ describe("returnYellow", function() {
         expect(returnYellow()).toBe("yellow");
     });
 });
-
-
