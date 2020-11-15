@@ -73,5 +73,7 @@ function last(arr) {
     return arr[arr.length - 1];
 }
 console.log(last(teas));
-
+console.log(last(shoes));
 })();
+
+// web dev simplified youtube
