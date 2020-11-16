@@ -25,12 +25,11 @@ console.log(planetsArray);
      */
 
 var planetsString2 = planetsArray.join(" <br> ");
-console.log(planetsString2);
+document.write(planetsString2);
 // You have to put <br> in “”
-var planetsString3 = planetsArray.join(" <ul> ");
-console.log(planetsString3);
-
-
-
-
+var planetsString3 = planetsArray.join(" <ul> <li> </li> </ul> ");
+document.write(planetsString3);
 })();
+
+
+// "<ul>" + "<li>" + planetsArray.join("</li><li>") + "</li>" + "</ul>"

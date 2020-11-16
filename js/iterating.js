@@ -34,8 +34,8 @@ for (var i = 0; i < names.length; i++) {
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(function(names) {
-    console.log(names);
+names.forEach(function(name, i) {
+    console.log(i + ":" + name);
     });
     /**
      * TODO:
@@ -55,12 +55,18 @@ var shoes = ['nike', 'reebok', 'adidas', 'freebirds', 'vans'];
 function first(arr) {
     return arr[0];
 }
+// Alternative way to re-write function; anonymous function
+// var first = function(arr) {
+//     return arr[0];
+// }
+
 function second(arr) {
     return arr[1];
 }
 function third(arr) {
     return arr[2];
 }
+
 console.log(first(teas));
 console.log(first(shoes));
 console.log(second(teas));
@@ -68,7 +74,7 @@ console.log(second(shoes));
 console.log(third(teas));
 console.log(third(shoes));
 
-// Return last array item in teas array
+// Return last array item in teas & shoes array
 function last(arr) {
     return arr[arr.length - 1];
 }
@@ -76,6 +82,8 @@ console.log(last(teas));
 console.log(last(shoes));
 })();
 
+
+// Time Example Function
 function countTimer(num) {
     var start = Date.now();
     console.log("Counting from 1 to " + num);
