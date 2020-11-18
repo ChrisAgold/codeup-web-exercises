@@ -10,7 +10,8 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-var planetsArray = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+// var planetsArray = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+planetsArray = planetsString.split("|") // convert string to array
 console.log(planetsArray);
 
     /**
@@ -27,9 +28,8 @@ console.log(planetsArray);
 var planetsString2 = planetsArray.join(" <br> ");
 document.write(planetsString2);
 // You have to put <br> in “”
-var planetsString3 = planetsArray.join(" <ul> <li> </li> </ul> ");
+var planetsString3 = planetsArray.join(" </li><br><li></li> ");
 document.write(planetsString3);
 })();
-
 
 // "<ul>" + "<li>" + planetsArray.join("</li><li>") + "</li>" + "</ul>"
