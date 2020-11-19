@@ -2,9 +2,6 @@
     "use strict";
 // NOTE: "this." references object
 
-
-
-
     /**
      * TODO:
      * Create an object with firstName and lastName properties that are strings
@@ -17,8 +14,8 @@
      */
 var person = {
     // var name : value ,
-    firstName: "Sam",
-    lastName: "Lazo"
+    firstName: "Vitold",
+    lastName: "Buzinski"
     }
     console.log(person.firstName) // "Sam"
     console.log(person.lastName) // "Lazo"
@@ -32,7 +29,7 @@ var person = {
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 person.sayHello = function() {
-    return "hello, " + "" + this.firstName + " " + this.lastName;
+    return "Hello, " + "" + this.firstName + " " + this.lastName;
 }
 console.log(person.sayHello());
 
@@ -55,15 +52,22 @@ var shoppers = [
     {name: 'Ryan', amount: 250},
     {name: 'George', amount: 320}
     ];
-
-var discount = function (shoppers){
-    if (shoppers.amount < 200) {
-            console.log('Shopper ' + shoppers.name + ', total bill before discount, ' + shoppers.amount + ' discount $0, ' + ' amount after discount ' + shoppers.amount);
+shoppers.forEach(function (shopper) {
+    if (shopper.amount > 200) {
+        console.log("Howdy there, " + shopper.name + "! Your total before any discount is " + shopper.amount.toFixed(2) + ". since that's over $200, you will get a 12% discount, meaning your final total is $" + (shopper.amount * .88).toFixed(2) + " , ");
     } else {
-            console.log('Shopper ' + shoppers.name + ', total bill before discount, ' + shoppers.amount + ' discount, ' + shoppers.amount * .12 + ' amount after discount ' + (shoppers.amount - shoppers.amount * .12));
+        console.log("Howdy there " + shopper.name + "! Your total before discount is $" + shopper.amount.toFixed(2) + " , As this is less than $200, you will not get a discount. Your total today is $" + shopper.amount.toFixed(2) + " .");
     }
-}
-shoppers.forEach(discount);
+});
+
+// var discount = function (shoppers){
+//     if (shoppers.amount < 200) {
+//             console.log('Shopper ' + shoppers.name + ', total bill before discount, ' + shoppers.amount + ' discount $0, ' + ' amount after discount ' + shoppers.amount);
+//     } else {
+//             console.log('Shopper ' + shoppers.name + ', total bill before discount, ' + shoppers.amount + ' discount, ' + shoppers.amount * .12 + ' amount after discount ' + (shoppers.amount - shoppers.amount * .12));
+//     }
+// }
+// shoppers.forEach(discount);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -77,6 +81,8 @@ shoppers.forEach(discount);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    // Function Example of above problem
+
     var books = [
         {title: 'Harry Potter', author:{
                 firstName: 'JK', lastName: 'Rowling',
@@ -98,6 +104,10 @@ shoppers.forEach(discount);
     console.log(books[0].author.firstName);
     console.log(books[0].author.lastName);
 
+    for (var x = 0; x < 5; x++) {
+        console.log("Book # " + (x+1));
+        console.log("Author " + books[x].author.firstName);
+    }
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -123,11 +133,15 @@ shoppers.forEach(discount);
      *      ...
      */
 
-for (var x = 0; x < 5; x++) {
-    console.log("Book # " + (x+1));
-    console.log("Author " + books[x].author.firstName);
-}
-
+// Bonus
+    function showBookInfo(book) {
+    var str = "Title: " + book.title + "\n";
+    str += "Author: " + book.author.firstName + " " + book.author.lastName;
+    return str;
+    }
+books.forEach(function(book, index) {
+    console.log("Book #" + index + 1 + "\n" + showBookInfo(book));
+});
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -138,4 +152,20 @@ for (var x = 0; x < 5; x++) {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+        function addBook(title, first, last, booksArr) {
+        var obj = {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+        };
+        booksArr.push(obj);
+        return booksArr;
+    }
+        addBook("The Art of War", "Sun", "Tsu", books);
+        books.forEach(function(book) {
+            console.log(book);
+    });
 })();
