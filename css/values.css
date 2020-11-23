@@ -9,24 +9,32 @@ main {
     margin: 0 auto;
     padding: 1rem;
 
-    display: grid;
+
     grid-gap: 1em;
     grid-template-columns: 1fr;
-
-    background-color: navy;
 }
+
 @media (min-width: 800px) {
-    main { grid-template-columns: repeat(2, 1fr);
+    main {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
     }
-    #codeupValues { grid-column: 1 / span 2; }
+
+    #codeupValues {
+        grid-column: 1 / span 2;
+    }
 }
+
 @media (min-width: 1600px) {
-    main { grid-template-columns: repeat(4, 1fr);
+    main {
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 2fr;
         max-width: 2000px;
     }
-    #codeupValues { grid-column: 1 / span 4; }
+
+    #codeupValues {
+        grid-column: 1 / span 4;
+    }
 }
 
 section {
@@ -36,22 +44,30 @@ section {
     font-size: 2rem;
     font-family: Chalkboard;
     background-color: darkgreen;
-    color: whitesmoke;
+    color: beige;
+    border-radius: 5px;
+    animation-name: colors;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
 }
-.value {
+
+.values {
+    color: cornflowerblue;
 }
 
 #codeupLogo {
-    background-color: #333;
+    background-color: darkseagreen;
 }
 
 /*Here is where you can set styles for the different sections*/
 #codeupValues {
 }
+
 #codeupValues h2 {
-    /*color: coral;*/
-    /*font-family: "Apple Chancery";*/
+    color: coral;
+    font-family: "Apple Chancery";
 }
+
 #codeupValues p {
     color: darkseagreen;
 }
@@ -59,9 +75,11 @@ section {
 #BH {
     background-color: darkolivegreen;
 }
+
 #BH h2 {
     /*color: blueviolet;*/
 }
+
 #BH p {
 
 }
@@ -69,9 +87,11 @@ section {
 #CIG {
     background-color: darkgreen;
 }
+
 #CIG h2 {
 
 }
+
 #CIG p {
 
 }
@@ -79,9 +99,11 @@ section {
 #DE {
     background-color: forestgreen;
 }
+
 #DE h2 {
 
 }
+
 #DE p {
 
 }
@@ -89,9 +111,38 @@ section {
 #AWI {
     background-color: darkseagreen;
 }
+
 #AWI h2 {
 
 }
+
 #AWI p {
 
+}
+
+#help {
+    color: blue;
+}
+
+/*@media (min-width 1600px) {*/
+/*    */
+/*}*/
+
+@keyframes colors {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+body {
+    background-image: url("../img/double-bubble-dark.png")
 }

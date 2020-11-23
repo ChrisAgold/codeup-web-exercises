@@ -1,82 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome</title>
-    </head>
-        <body>
-            <h1>Welcome to Veridian Dynamics!</h1>
-            <p>At Veridian Dynamics, we solve your problems with technology.</p>
-            <hr>
-        <h3>Core Values</h3>
-        <ul>
-            <li>
-                Competence
-            </li>
-            <li>
-                Involvement
-            </li>
-            <li>
-                Technology
-            </li>
-        </ul>
-        <h3>Our Process</h3>
-            <ol>
-                <li>
-                    Plan
-                </li>
-                <li>
-                    Evaluate
-                </li>
-                <li>
-                    Implement
-                </li>
-            </ol>
-        <h3>2020 Vision</h3>
-            <ul>
-                <li>
-                    Become #1 in Technology
-                </li>
-                <li>
-                    Increase Success by 20%
-                </li>
-                <li>
-                    Increase Business by 30%
-                </li>
-            </ul>
-        <hr>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1 id="head" class="fancy-header">Welcome to Veridian Dynamics!</h1>
+<p id="main">At Veridian Dynamics, we solve your problems with technology.</p>
+<hr>
+<h3>Core Values</h3>
+<ol>
+    <li>
+        Competence
+    </li>
+    <li>
+        Involvement
+    </li>
+    <li>
+        Technology
+    </li>
+</ol>
+<h3>Our Process</h3>
+<ol>
+    <li>
+        Plan
+    </li>
+    <li>
+        Evaluate
+    </li>
+    <li>
+        Implement
+    </li>
+</ol>
+<h3>2020 Vision</h3>
+<ol>
+    <li>
+        Become #1 in Technology
+    </li>
+    <li>
+        Increase Success by 20%
+    </li>
+    <li>
+        Increase Business by 30%
+    </li>
+</ol>
+<hr>
 <h2>Company Vision</h2>
-            <img src="img/tea.jpeg" alt="Example Image" width="300" height="221">
-            <img src="img/coffee.jpg" alt="Example Image" width="300" height="221">
-            <br>
-            <img src="img/code.jpeg" alt="Example Image" width="300" height="221">
-            <img src="img/codes.jpeg" alt="Example Image" width="300" height="221">
-        <h3>Our Product</h3>
-        <table>
-            <tr>
-                <th>Plan</th>
-                <th>Price</th>
-                <th>Features</th>
-            </tr>
-            <tr>
-                <td>Starter</td>
-                <td>$99</td>
-                <td>Base Technology</td>
-            </tr>
-            <tr>
-                <td>Advanced</td>
-                <td>$199</td>
-                <td>Additional Features</td>
-            </tr>
-            <tr>
-                <td>Premium</td>
-                <td>$499</td>
-                <td>Unlimited Support</td>
-            </tr>
-        </table>
-            <footer>
-                <p><em>All products come with our quality guaranteed.®</em></p>
-            </footer>
-            <a href="#top"><b>Back to top of page</b></a>
-        </body>
-</html>
+<img src="img/tea.jpeg" alt="Example Image" width="300" height="221">
+<img src="img/coffee.jpg" alt="Example Image" width="300" height="221">
+<br>
+<img src="img/code.jpeg" alt="Example Image" width="300" height="221">
+<img src="img/codes.jpeg" alt="Example Image" width="300" height="221">
+<h3>Our Product</h3>
+<table>
+    <tr>
+        <th>Plan</th>
+        <th>Price</th>
+        <th>Features</th>
+    </tr>
+    <tr>
+        <td>Starter</td>
+        <td>$99</td>
+        <td>Base Technology</td>
+    </tr>
+    <tr>
+        <td>Advanced</td>
+        <td>$199</td>
+        <td>Additional Features</td>
+    </tr>
+    <tr>
+        <td>Premium</td>
+        <td>$499</td>
+        <td>Unlimited Support</td>
+    </tr>
+</table>
+<footer>
+    <p><em>All products come with our quality guaranteed®.</em></p>
+</footer>
+<a href="#top"><b>Back to top of page</b></a>
+
+
+<form method="POST" action="http://request-inspector.glitch.me/">
+    <h3>Login</h3>
+    Username:
+    <input type="text" id="username" name="username">
+    <!-- id="" is not part of request, the name attribute is, usually name them the same (id & name) -->
+    <br>
+
+    Password:
+    <input type="text" id="password" name="password">
+    <br>
+
+    <input type="submit">
+</form>
+
+
+<form method="POST" action="http://request-inspector.glitch.me/">
+    <h3>Registration</h3>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" value="Your name here">
+
+    <br>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" value="Your name here">
+
+    <br>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" value="Your email here">
+
+    <br>
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" value="Your phone here">
+    <br>
+
+    <label for="about">Tell Us About Yourself</label>
+    <br>
+    <textarea id="about" name="about"> Your bio here</textarea>
+    <br>
+
+    <input type="checkbox" name="eula" value="eula">I have read and agree to the <a href="/terms-and-conditions.html">terms
+    and conditions</a>
+    <br>
+
+    Preferred Contact Method
+    <br>
+    <input type="checkbox" id="contactText" name="contactMethod" value="text">
+    <label for="contactText">Text</label>
+    <br>
+    <input type="checkbox" id="contactEmail" name="contactMethod" value="email">
+    <label for="contactEmail">Email</label>
+    <br><br>
+
+    Password: <input type="password" value="FakePSW" id="myInput"><br><br>
+    <input type="checkbox" onclick="myFunction()">Show Password
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+    </script>
+
+</form>
+<button>Register</button>
+
+</body>

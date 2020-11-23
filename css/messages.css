@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.btn {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#box1 {
+    background-color: rgba(0, 145, 255, 0.5);
+    color: blue;
+    text-align: left;
+}
+
+#box2 {
+    background-color: rgba(16, 255, 71, 0.5);
+    color: #1e7c1e;
+    text-align: left;
+}
+
+#box3 {
+    background-color: rgba(218, 239, 109, 0.5);
+    color: darkorange;
+    text-align: left;
+}
+
+#box4 {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: red;
+    text-align: left;
+}

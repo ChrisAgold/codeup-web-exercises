@@ -1,0 +1,39 @@
+/* # for id; class . */
+h1.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+
+th {
+    background-color: coral;
+}
+
+p>strong {
+    color: cornflowerblue;
+}
+
+h1.fancy-header {
+    font-size30: px;
+}
+
+#main {
+    text-align: center;
+}
+
+body {
+    background-image: url("../img/email-pattern.png");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: crimson;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+

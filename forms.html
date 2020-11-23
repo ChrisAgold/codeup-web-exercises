@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
 </head>
 <body>
-$END$
+<h1>Register With Us</h1>
+
+<form method="POST" action="http://request-inspector.glitch.me/">
+    <h3>Login</h3>
+    Email:
+    <input type="text" id="email" name="email" placeholder="email">
+    <!-- id="" is not part of request, the name attribute is, usually name them the same (id & name) -->
+    <br>
+
+    Password:
+    <input type="text" id="password" name="password" placeholder="password">
+    <br>
+    <p>
+        <label for="about">Tell Us About Yourself</label>
+        <br>
+        <textarea id="about" name="about" placeholder="Your bio here"></textarea>
+    </p>
+    <br>
+    <hr>
+    <p>
+        <>How did you hear about us?<>
+    </p>
+    <br>
+    billboard <input type="radio" name="question_1" value="billboard"><br>
+    radio advertisement <input type="radio" name="question_2" value="radio advertisement"><br>
+    internet advertisement <input type="radio" name="question_3" value="internet advertisement"><br>
+    other <input type="radio" name="question_4" value="other"><br>
+
+    <br>
+    Select a Programming Language
+    <br>
+    <select name="dropdown">
+        <option value="Javascript" selected>Javascript</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+    </select>
+
+    <input type="submit">
+    <br>
+</form>
+
+
 </body>
 </html>
