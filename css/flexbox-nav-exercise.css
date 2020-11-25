@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background: lightgrey;
+}
+.navbar {
+    display: flex;
+    background-color: grey;
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: bold
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    padding: 1.5em;
+}
+nav a:hover {
+    background: lightskyblue;
+}
+.item1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: .1;
+
+}
+.item2 {
+    display: flex;
+    align-items: center;
+    font-family: Verdana;
+    margin: -35px;
+    font-size: 3em;
+    padding: 0.2em;
+    justify-content: space-between;
+}
+.item3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: .1;
+}

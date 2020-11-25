@@ -61,6 +61,7 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+    position: relative;
 }
 
 .btn {
@@ -103,8 +104,8 @@ a {
 
 .profile-image {
     position: absolute;
-    top: 250px;
     height: 80px;
+    top: -28px;
 }
 
 .profile-details {
@@ -133,6 +134,7 @@ a {
 
 .container {
     padding: 2em;
+    margin-top: 2em;
 }
 
 .media {
@@ -157,9 +159,3 @@ a {
 .profile-entry {
     margin: 0.5em;
 }
-
-
-
-
-
-
