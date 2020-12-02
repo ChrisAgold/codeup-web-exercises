@@ -1,0 +1,35 @@
+body {
+    background-color: cornflowerblue;
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        background-color: indigo;
+
+    }
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: darkred;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: cornflowerblue;
+    }
+}
+
+    @media screen and (min-width: 1024px) {
+        h1 {
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        body {
+            background-color: darkgreen;
+        }
+    }
+
