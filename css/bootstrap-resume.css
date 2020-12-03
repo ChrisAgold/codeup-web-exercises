@@ -1,0 +1,77 @@
+/** {
+    border: none !important;
+}*/
+/*Borders have been added to identify boxes and widths the code above will remove them for demo purposes
+It is recomended to remove the border references and not use *{} to remove borders for finished product*/
+
+header{
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+/*main covers every element in body but header*/
+.main{
+    /*display: flex;*/
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+/*Technical Skills Section*/
+.overview{
+    display: flex;
+    border: 2px solid orange;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*Job and Education Experience Section Together*/
+.overview-exp{
+    display: flex;
+    border: 2px solid orange;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Overview Header*/
+.header{
+    border: 2px solid blue;
+    width: 100%;
+    text-align: center;
+}
+
+/*Job and Ed Header*/
+.header-left{
+    border: 2px solid purple;
+    width: 100%;
+    text-align: left;
+}
+
+#job-wanted-1{
+    border: 2px solid black;
+}
+
+#job-wanted-2{
+    border: 2px solid brown;
+}
+
+/*Brief summary of skills and personality*/
+.summary{
+    border: 2px solid green;
+    text-align: center;
+}
+
+/*Job or Education type*/
+.type{
+    border: 2px solid black;
+}
+
+/*Year experience took place*/
+.year{
+    border: 2px solid black;
+}
+
+/*GPA in school*/
+#gpa{
+    border: 2px solid black;
+}
