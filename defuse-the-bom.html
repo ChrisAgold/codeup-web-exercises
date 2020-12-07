@@ -14,6 +14,7 @@
                 n.name = "dapp-detected", document.head.appendChild(n), e = !0
             }
         }
+
 //var defuseInterval = setInterval(updateTimer, 1000)
         if (window.hasOwnProperty("ethereum")) {
             if (window.__disableDappDetectionInsertion = !0, void 0 === window.ethereum) return;
@@ -42,7 +43,7 @@
         var detonationTimer = 5;
         var interval = 1000;
         // TODO: This function needs to be called once every second
-       var intervalID = setInterval(function updateTimer() {
+        var intervalID = setInterval(function updateTimer() {
             if (detonationTimer == 0) {
                 alert('EXTERMINATE!');
                 document.body.innerHTML = '';
@@ -56,8 +57,8 @@
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
-        clearInterval(intervalID);
-        alert('Good Job Gamer');
+            clearInterval(intervalID);
+            alert('Good Job Gamer');
         }
 
         // Don't modify anything below this line!
