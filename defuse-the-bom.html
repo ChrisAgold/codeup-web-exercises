@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://java.codeup.com/examples/javascript/defuse-the-bom.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Defuse the BOM</title>
+    <script data-dapp-detection="">(function () {
+        let e = !1;
+
+        function n() {
+            if (!e) {
+                const n = document.createElement("meta");
+                n.name = "dapp-detected", document.head.appendChild(n), e = !0
+            }
+        }
+//var defuseInterval = setInterval(updateTimer, 1000)
+        if (window.hasOwnProperty("ethereum")) {
+            if (window.__disableDappDetectionInsertion = !0, void 0 === window.ethereum) return;
+            n()
+        } else {
+            var t = window.ethereum;
+            Object.defineProperty(window, "ethereum", {
+                configurable: !0, set: function (e) {
+                    window.__disableDappDetectionInsertion || n(), t = e
+                }, get: function () {
+                    return window.__disableDappDetectionInsertion || n(), t
+                }
+            })
+        }
+    })();</script>
+</head>
+<body cz-shortcut-listen="true">
+
+<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
+
+<script>
+    (function () {
+        "use strict";
+
+        var detonationTimer = 5;
+        var interval = 1000;
+        // TODO: This function needs to be called once every second
+       var intervalID = setInterval(function updateTimer() {
+            if (detonationTimer == 0) {
+                alert('EXTERMINATE!');
+                document.body.innerHTML = '';
+            } else if (detonationTimer > 0) {
+                document.getElementById('timer').innerHTML = detonationTimer;
+            }
+
+            detonationTimer--;
+        }, interval);
+
+        // TODO: When this function runs, it needs to
+        // cancel the interval/timeout for updateTimer()
+        function defuseTheBOM() {
+        clearInterval(intervalID);
+        alert('Good Job Gamer');
+        }
+
+        // Don't modify anything below this line!
+        //
+        // This causes the defuseTheBOM() function to be called
+        // when the "defuser" button is clicked.
+        // We will learn about events in the DOM lessons
+        var defuser = document.getElementById('defuser');
+        defuser.addEventListener('click', defuseTheBOM);
+    })();
+</script>
+
+
+</body>
+</html>
