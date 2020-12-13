@@ -15,9 +15,9 @@ styleSelect.addEventListener("change", function (event) {
 var resetButton = document.getElementById("reset-button")
 resetButton.addEventListener("click", function (event) {
     map.setZoom(10);
-    map.setCenter([-98.4916, 29.4252]);
+    map.setCenter([-98.61419003862153, 29.55597529644091]);
     map.setStyle('mapbox://styles/mapbox/streets-v9');
-    marker.setLngLat([-98.4916, 29.4252]);
+    marker.setLngLat([-98.61419003862153, 29.55597529644091]);
     popup.setText("Codeup");
     //TODO: RESET the dropdown to initial option
     //TODO: RESET style dropdown to initial option
@@ -62,7 +62,7 @@ var map = new mapboxgl.Map({
 var marker = new mapboxgl.Marker({
     color: 'green',
 })
-    .setLngLat([-98.48613798052709, 29.42598667424656])
+    .setLngLat([-98.61419003862153, 29.55597529644091])
     .addTo(map);
 // TODO TOGETHER: Change the color of the marker
 
@@ -83,7 +83,7 @@ var popup = new mapboxgl.Popup({
     className: 'codeup-popup'
 })
     .setLngLat([-98.48957136173456, 29.42686055035059])
-    .setHTML("<p>Codeup Rocks!</p>")
+    .setHTML("<p>Nama Ramen</p>")
     .addTo(map);
 
 marker.setPopup(popup);
