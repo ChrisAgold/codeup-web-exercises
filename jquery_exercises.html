@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <link href="">
+
+</head>
+
+<body>
+
+    <h1 class="codeup" id="heading">Hello Cat People</h1>
+    <div class="container" id="divider">
+    <p class="codeup" id="content">Cats are pretty cool creatures. Here are their favorite items to keep.</p>
+    <ul class="" id="items">
+        <li class="list-item" id="cat-item1">Catnip</li>
+        <li class="list-item" id="cat-item2">Tuna</li>
+        <li class="list-item" id="cat-item3">Feather</li>
+        <li class="list-item" id="cat-item4">Mouse Toy</li>
+    </ul>
+</div>
+
+<!--Local JQuery File-->
+<script src="js/jquery-2.2.4.js"></script>
+<script type="text/javascript">
+    "use strict"
+    // $(document).ready(function () {
+    //     alert('The DOM has finished loading!');
+    // });
+
+    // Alert the contents of the element by ID.
+    // $(document).ready(function() {
+    //     alert($('#heading').html());
+    // })
+    // var contents = $('#cat-item1').html();
+    // alert(contents);
+    // var contents = $('#heading').html();
+    // alert(contents);
+
+    // Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
+    $('.codeup').css('border', '1px solid red');
+
+    //set the font-size of all li elements to 20px.
+    $('li').css('font-size', '20px');
+
+    // Craft selectors that highlight all the h1, p, and li elements.
+    $('li,h1,p').css('background-color', 'yellow');
+
+    // Alert contents of h1 element.
+    // var contents = $('h1').html();
+    // alert(contents);
+
+
+</script>
+</body>
+
+</html>
