@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-2.2.4.js">
+    "use strict";
+    const keyInput = {
+        38: "up",
+        40: "down",
+        37: "left",
+        39: "right",
+        65: "a",
+        66: "b",
+        13: "return"
+    };
+    var codeSequence = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "return"];
+    var codePosition = 0;
+    $(document).keydown(function (event) {
+        var keys = keyInput[event.keyCode];
+        var keyStroke = codeSequence[codePosition];
+        if (keys === keyStroke) {
+            codePosition++;
+            if (codePosition === codeSequence.length) {
+                thirtyLives();
+                codePosition = 0;
+            }
+        } else {
+            codePosition = 0;
+        }
+    });
+
+    function thirtyLives() {
+        alert("cheater.");
+        $(this).css("background-image", "url('/img/Dark_Souls.jpg')");
+    }
+
+
+</script>
+</body>
+</html>
