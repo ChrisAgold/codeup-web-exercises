@@ -17,18 +17,28 @@
         66: "b",
         13: "return"
     };
+    // defining the code sequence array
     var codeSequence = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "return"];
+    // Where you are in code sequence
     var codePosition = 0;
+    // keydown function is ran for every key
     $(document).keydown(function (event) {
+        // Listen for key input
         var keys = keyInput[event.keyCode];
+        // position in keyInput
         var keyStroke = codeSequence[codePosition];
         if (keys === keyStroke) {
+            // move up in array
             codePosition++;
+            // if you get to end of array
             if (codePosition === codeSequence.length) {
+                // run function
                 thirtyLives();
+                // & reset to zero
                 codePosition = 0;
             }
         } else {
+            // if above is false
             codePosition = 0;
         }
     });
