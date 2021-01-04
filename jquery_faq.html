@@ -10,6 +10,10 @@
         .highlighted {
             background-color: goldenrod;
         }
+
+        .blue {
+            color: blue;
+        }
     </style>
 
 </head>
@@ -76,6 +80,7 @@
                 <li>Redwood National Park lies in the Pacific time zone</li>
             </ul>
             <button id="highlight">Click to highlight</button>
+            <button id="traversing">Click</button>
         </section>
     </section>
     <!--    Exercises-->
@@ -110,21 +115,28 @@
             // });
 
             // Highlight dt element
-            $("dt").click(function () {
-                $(this).toggleClass("highlighted");
+            // $("dt").click(function () {
+            //     $(this).toggleClass("highlighted");
+            // });
+            $("#highlight").click(function () {
+                $('.park').last().children().toggleClass('highlighted');
             });
             // Exercises
             // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
             //
             //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
-
-
             //     Create a button that, when clicked, makes the last li in each ul have a yellow background.
-            $("#highlight").click(function () {
-                $('.park').last().children().toggleClass('highlighted');
+            $("#traversing").click(function () {
+                $("ul li:nth-last-child(1)").addClass('highlighted');
             });
-
+            //     When any list item is clicked, first li of the parent ul should have a font color of blue.
+            $("li").click(function () {
+                $(this).parent().children().first().addClass('blue');
+            });
             //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+            // $("h3").click(function () {
+            //     $(this).next().children('li').addClass("font-weight", "bold");
+            // });
             $("#bb").click(function () {
                 $('#bend').children().css('font-weight', 'bold');
             });
@@ -133,11 +145,6 @@
             });
             $("#rw").click(function () {
                 $('#redwood').children().css('font-weight', 'bold');
-            });
-
-            //     When any list item is clicked, first li of the parent ul should have a font color of blue.
-            $("ul").click(function () {
-                $('li').css('background-color', 'blue');
             });
         });
     </script>
