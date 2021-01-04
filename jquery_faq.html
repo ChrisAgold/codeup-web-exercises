@@ -51,6 +51,32 @@
             <dt>What causes the blue haze for which Great Smoky Mountains National Park is named?</dt>
             <dd class="invisible">Plants</dd>
         </dl>
+        <section id="list">
+            <h3 id="bb">Big Bend</h3>
+            <ul id="bend" class="park">
+                <li>Big Bend National Park lies in the Central time zone</li>
+                <li>Big Bend was made a national park on June 20, 1935</li>
+                <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>
+                <li>Big Bend National Park lies in the Central time zone</li>
+            </ul>
+            <h3 id="hs">Hot Springs National Park</h3>
+            <ul id="spring" class="park">
+                <li>Hot Springs National Park covers a total area of 5,550 acres</li>
+                <li>Hot Springs National Park lies in the Central time zone</li>
+                <li>There is no entrance fee for Hot Springs National Park</li>
+                <li>The area was first protected in 1832 as Hot Springs Reservation.</li>
+            </ul>
+            <h3 id="rw">Redwood National Park</h3>
+            <ul id="redwood" class="park">
+                <li>Over 1.5 million people visit Redwood National and State Parks annually.</li>
+                <li>The first Redwood trees pre-date humans, spiders, and flowers, first appearing over 240 million
+                    years ago during the time of the dinosaurs.
+                </li>
+                <li>Redwood was made a national park on October 2, 1968</li>
+                <li>Redwood National Park lies in the Pacific time zone</li>
+            </ul>
+            <button id="highlight">Click to highlight</button>
+        </section>
     </section>
     <!--    Exercises-->
     <!--    Create a new file named jquery_faq.html. Commit all changes to GitHub.-->
@@ -87,8 +113,39 @@
             $("dt").click(function () {
                 $(this).toggleClass("highlighted");
             });
+            // Exercises
+            // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
+            //
+            //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
+
+
+            //     Create a button that, when clicked, makes the last li in each ul have a yellow background.
+            $("#highlight").click(function () {
+                $('.park').last().children().toggleClass('highlighted');
+            });
+
+            //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+            $("#bb").click(function () {
+                $('#bend').children().css('font-weight', 'bold');
+            });
+            $("#hs").click(function () {
+                $('#spring').children().css('font-weight', 'bold');
+            });
+            $("#rw").click(function () {
+                $('#redwood').children().css('font-weight', 'bold');
+            });
+
+            //     When any list item is clicked, first li of the parent ul should have a font color of blue.
+            $("ul").click(function () {
+                $('li').css('background-color', 'blue');
+            });
         });
     </script>
 </main>
 </body>
 </html>
+
+
+
+
+
