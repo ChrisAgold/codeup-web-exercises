@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Fun</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--CSS-->
+    <style type="text/css">
+        .highlighted {
+            background-color: goldenrod;
+        }
+    </style>
+
+</head>
+<body>
+<main class="container">
+    <section class="jumbotron">
+        <p>National Parks FAQ</p>
+        <button id="btn">Click to Show Answers</button>
+        <br>
+        <dl>
+            <br>
+            <dt>What is the largest national park in the USA?</dt>
+            <dd class="invisible">Wrangell–St. Elias</dd>
+            <br>
+            <dt>What is the smallest national park in the USA?</dt>
+            <dd class="invisible">Hot Springs National Park</dd>
+            <br>
+            <dt>National park with greatest biodiversity.</dt>
+            <dd class="invisible">Great Smoky Mountains</dd>
+            <br>
+            <dt>National park with most buffalo USA?</dt>
+            <dd class="invisible">Yellowstone National Park</dd>
+            <br>
+            <dt>How many people visit the national parks? (2019)</dt>
+            <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
+            <br>
+            <dt>What is the most-visited national park?</dt>
+            <dd class="invisible">Golden Gate National Recreation Area</dd>
+            <br>
+            <dt>How many people visited Golden Gate National Recreation Area in 2019?</dt>
+            <dd class="invisible">15 million</dd>
+            <br>
+            <dt>What was the first national park?</dt>
+            <dd class="invisible">Yellowstone (Wyoming, Montana, Idaho)</dd>
+            <br>
+            <dt>Which national park has the deepest lake in the U.S.?</dt>
+            <dd class="invisible">Crater Lake (Oregon)</dd>
+            <br>
+            <dt>What causes the blue haze for which Great Smoky Mountains National Park is named?</dt>
+            <dd class="invisible">Plants</dd>
+        </dl>
+    </section>
+    <!--    Exercises-->
+    <!--    Create a new file named jquery_faq.html. Commit all changes to GitHub.-->
+
+    <!--    In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+
+    <!--    Add a class to all dd elements named invisible.-->
+
+    <!--    Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
+
+    <!--    Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
+    <!--    Bonus-->
+
+    <!--    When any of the dt elements is clicked, the element that was clicked should be highlighted.-->
+
+    <!-- jQuery and bootstrap -->
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show Answers
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("dd").toggleClass("invisible").toggleClass("visible");
+            });
+
+            // $("dd").addClass("invisible");
+            // $('#toggle').click(function(){
+            //    $("dd").toggleClass("invisible");
+            // });
+
+            // Highlight dt element
+            $("dt").click(function () {
+                $(this).toggleClass("highlighted");
+            });
+        });
+    </script>
+</main>
+</body>
+</html>
