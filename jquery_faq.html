@@ -1,158 +1,280 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery Fun</title>
+    <meta charset="UTF-8">
+    <title>Astronomy FAQs</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!--CSS-->
-    <style type="text/css">
-        .highlighted {
-            background-color: goldenrod;
-        }
 
-        .blue {
-            color: blue;
+    <style>
+        .invisible { visibility: hidden }
+        /*.invisible { display: none }*/
+        dt::first-letter {
+            font-size: large;
+            font-weight: bold;
+            color: red;
         }
+        .highlighted { background-color: yellow }
+        .bold { font-weight: bolder }
+        .blue { color: coral }
     </style>
-
 </head>
-<body>
-<main class="container">
-    <section class="jumbotron">
-        <p>National Parks FAQ</p>
-        <button id="btn">Click to Show Answers</button>
-        <br>
-        <dl>
-            <br>
-            <dt>What is the largest national park in the USA?</dt>
-            <dd class="invisible">Wrangell–St. Elias</dd>
-            <br>
-            <dt>What is the smallest national park in the USA?</dt>
-            <dd class="invisible">Hot Springs National Park</dd>
-            <br>
-            <dt>National park with greatest biodiversity.</dt>
-            <dd class="invisible">Great Smoky Mountains</dd>
-            <br>
-            <dt>National park with most buffalo USA?</dt>
-            <dd class="invisible">Yellowstone National Park</dd>
-            <br>
-            <dt>How many people visit the national parks? (2019)</dt>
-            <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
-            <br>
-            <dt>What is the most-visited national park?</dt>
-            <dd class="invisible">Golden Gate National Recreation Area</dd>
-            <br>
-            <dt>How many people visited Golden Gate National Recreation Area in 2019?</dt>
-            <dd class="invisible">15 million</dd>
-            <br>
-            <dt>What was the first national park?</dt>
-            <dd class="invisible">Yellowstone (Wyoming, Montana, Idaho)</dd>
-            <br>
-            <dt>Which national park has the deepest lake in the U.S.?</dt>
-            <dd class="invisible">Crater Lake (Oregon)</dd>
-            <br>
-            <dt>What causes the blue haze for which Great Smoky Mountains National Park is named?</dt>
-            <dd class="invisible">Plants</dd>
-        </dl>
-        <section id="list">
-            <h3 id="bb">Big Bend</h3>
-            <ul id="bend" class="park">
-                <li>Big Bend National Park lies in the Central time zone</li>
-                <li>Big Bend was made a national park on June 20, 1935</li>
-                <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>
-                <li>Big Bend National Park lies in the Central time zone</li>
-            </ul>
-            <h3 id="hs">Hot Springs National Park</h3>
-            <ul id="spring" class="park">
-                <li>Hot Springs National Park covers a total area of 5,550 acres</li>
-                <li>Hot Springs National Park lies in the Central time zone</li>
-                <li>There is no entrance fee for Hot Springs National Park</li>
-                <li>The area was first protected in 1832 as Hot Springs Reservation.</li>
-            </ul>
-            <h3 id="rw">Redwood National Park</h3>
-            <ul id="redwood" class="park">
-                <li>Over 1.5 million people visit Redwood National and State Parks annually.</li>
-                <li>The first Redwood trees pre-date humans, spiders, and flowers, first appearing over 240 million
-                    years ago during the time of the dinosaurs.
-                </li>
-                <li>Redwood was made a national park on October 2, 1968</li>
-                <li>Redwood National Park lies in the Pacific time zone</li>
-            </ul>
-            <button id="highlight">Click to highlight</button>
-            <button id="traversing">Click</button>
-        </section>
-    </section>
-    <!--    Exercises-->
-    <!--    Create a new file named jquery_faq.html. Commit all changes to GitHub.-->
+<body class="container">
 
-    <!--    In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+<div id="newsletter" class="alert alert-dismissible"><span id="close-button">x</span><h2>Would you like to sign up for our newsletter?</h2>   </div>
+<div id="register"><h2>Please register for the site.</h2></div>
 
-    <!--    Add a class to all dd elements named invisible.-->
+<h1>Astronomy FAQs</h1>
+<a href="#" id="toggle">Toggle Details</a>
+<dl>
+    <dt>Andromeda</dt>
+    <dd>The Andromeda Galaxy, also known as Messier 31, M31, or NGC 224 and originally the Andromeda Nebula, is a barred spiral galaxy approximately 2.5 million light-years from Earth and the nearest major galaxy to the Milky Way.</dd>
+    <dt>Betelgeuse</dt>
+    <dd>Betelgeuse is usually the tenth-brightest star in the night sky and, after Rigel, the second-brightest in the constellation of Orion. It is a distinctly reddish semiregular variable star whose apparent magnitude, varying between +0.0 and +1.6, has the widest range displayed by any first-magnitude star.</dd>
+    <dt>Ceres</dt>
+    <dd>Ceres is the largest object in the main asteroid belt that lies between the orbits of Mars and Jupiter. With a diameter of 940 km, Ceres is both the largest of the asteroids and the only dwarf planet inside Neptune's orbit. It is the 25th-largest body in the Solar System within the orbit of Neptune. </dd>
+    <dt>Deimos</dt>
+    <dd>Deimos is the smaller and outermost of the two natural satellites of Mars, the other being Phobos. Deimos has a mean radius of 6.2 km and takes 30.3 hours to orbit Mars. Deimos is 23,460 km from Mars, much further than Mars's other moon, Phobos.</dd>
+    <dt>Europa</dt>
+    <dd>Europa, or Jupiter II, is the smallest of the four Galilean moons orbiting Jupiter, and the sixth-closest to the planet of all the 79 known moons of Jupiter. It is also the sixth-largest moon in the Solar System.</dd>
+    <dt>Fortuna</dt>
+    <dd>Fortuna (minor planet designation: 19 Fortuna) is one of the largest main-belt asteroids. It has a composition similar to 1 Ceres: a darkly colored surface that is heavily space-weathered with the composition of primitive organic compounds, including tholins.</dd>
+    <dt>Ganymede</dt>
+    <dd>Ganymede, a satellite of Jupiter, is the largest and most massive of the Solar System's moons. The ninth-largest object in the Solar System, it is the largest without a substantial atmosphere. It has a diameter of 5,268 km, making it 26% larger than the planet Mercury by volume, although it is only 45% as massive.</dd>
+    <dt>Hyperion</dt>
+    <dd>Hyperion, also known as Saturn VII, is a moon of Saturn discovered by William Cranch Bond, George Phillips Bond and William Lassell in 1848. It is distinguished by its irregular shape, its chaotic rotation, and its unexplained sponge-like appearance. It was the first non-round moon to be discovered.</dd>
+    <dt>IO</dt>
+    <dd>Io, or Jupiter I, is the innermost and third-largest of the four Galilean moons of the planet Jupiter. It is the fourth-largest moon in the Solar System, has the highest density of all of them, and has the lowest amount of water of any known astronomical object in the Solar System.</dd>
+    <dt>Jupiter</dt>
+    <dd>Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. </dd>
+    <dt>Kalypso</dt>
+    <dd>Kalypso is a moon of Saturn. It was It was discovered in 1980, from ground-based observations and is co-orbital with the moon Tethys.</dd>
+</dl>
 
-    <!--    Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
+<h3 class="parkName">Europa</h3>
+<ul class="facts">
+    <li>Orbits Jupiter</li>
+    <li>Named after Europa (consort of Zeus), a Phoenician princess in Greek mythology, from whom the name of the continent Europe is taken</li>
+    <li>Also one of the Oceanids, the daughters of the Titan Oceanus</li>
+    <li>Slightly smaller than Earth's moon</li>
+</ul>
+<h3 class="parkName">Hyperion</h3>
+<ul class="facts">
+    <li>Orbits Saturn</li>
+    <li>The first non-round moon to be discovered</li>
+    <li>Also a great series of sci-fi novels by Dan Simmons </li>
+    <li>One of the twelve Titan children of Gaia (Earth) and Uranus (Sky) who, led by Cronus, overthrew their father Uranus and were themselves later overthrown by the Olympians.</li>
+</ul>
+<h3 class="parkName">Kalypso</h3>
+<ul class="facts">
+    <li>Orbits Saturn</li>
+    <li>Named after a Sea Nymph in Greek Mythology</li>
+    <li>It has one of the highest albedos in the solar system.</li>
+    <li>Also the name of a very dark asteroid in the asteroid belt (53 Kalypso)</li>
+</ul>
 
-    <!--    Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+<button id="traversing">GO</button>
 
-    <!--    Bonus-->
 
-    <!--    When any of the dt elements is clicked, the element that was clicked should be highlighted.-->
+<!-- jQuery and bootstrap -->
+<script src="js/jquery-2.2.4.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- jQuery and bootstrap -->
-    <script src="js/jquery-2.2.4.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $("dd").toggleClass("invisible");
+        $("#toggle").click(function(){
+            $("dd").toggleClass("invisible");
+        });
 
-    <script>
-        // Show Answers
-        $(document).ready(function () {
-            $("#btn").click(function () {
-                $("dd").toggleClass("invisible").toggleClass("visible");
-            });
+        $("dt").click(function(){
+            $(this).toggleClass("highlighted");
+        });
 
-            // $("dd").addClass("invisible");
-            // $('#toggle').click(function(){
-            //    $("dd").toggleClass("invisible");
-            // });
-
-            // Highlight dt element
-            // $("dt").click(function () {
-            //     $(this).toggleClass("highlighted");
-            // });
-            $("#highlight").click(function () {
-                $('.park').last().children().toggleClass('highlighted');
-            });
-            // Exercises
-            // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
-            //
-            //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
-            //     Create a button that, when clicked, makes the last li in each ul have a yellow background.
-            $("#traversing").click(function () {
-                $("ul li:nth-last-child(1)").addClass('highlighted');
-            });
-            //     When any list item is clicked, first li of the parent ul should have a font color of blue.
-            $("li").click(function () {
-                $(this).parent().children().first().addClass('blue');
-            });
-            //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-            // $("h3").click(function () {
-            //     $(this).next().children('li').addClass("font-weight", "bold");
-            // });
-            $("#bb").click(function () {
-                $('#bend').children().css('font-weight', 'bold');
-            });
-            $("#hs").click(function () {
-                $('#spring').children().css('font-weight', 'bold');
-            });
-            $("#rw").click(function () {
-                $('#redwood').children().css('font-weight', 'bold');
+        $("#traversing").click(function (){
+            // $("ul li:nth-last-child(1)").addClass("highlighted");
+            $("ul").each(function(){
+                $(this).children().last().addClass("highlighted");
             });
         });
-    </script>
-</main>
+        $("h3").click(function(){
+            $(this).next().children("li").addClass("bold");
+        });
+        $("li").click(function(){
+            $(this).parent().children().first().addClass("blue");
+        });
+
+        $("#close-button").click(function(){
+            $("#newsletter").hide(1000);
+        });
+
+        $(".facts").hide();
+        $(".parkName").click(function(){
+            $(this).next().slideToggle(1000);
+        });
+
+        $("#register").hide().delay(8000).fadeIn(500);
+
+    });
+</script>
 </body>
 </html>
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>jQuery Fun</title>-->
+<!--    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+<!--    &lt;!&ndash;CSS&ndash;&gt;-->
+<!--    <style type="text/css">-->
+<!--        .highlighted {-->
+<!--            background-color: goldenrod;-->
+<!--        }-->
 
+<!--        .blue {-->
+<!--            color: blue;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
 
+<!--<main class="container">-->
+<!--    <section class="jumbotron">-->
+<!--        <div id="news">-->
+<!--            <h1>Would you like to sign up for our newsletter?</h1>-->
+<!--            <span id="x"><button>X</button></span>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--        <p>National Parks FAQ</p>-->
+<!--        <button id="btn">Click to Show Answers</button>-->
+<!--        <br>-->
+<!--        <dl>-->
+<!--            <br>-->
+<!--            <dt>What is the largest national park in the USA?</dt>-->
+<!--            <dd class="invisible">Wrangell–St. Elias</dd>-->
+<!--            <br>-->
+<!--            <dt>What is the smallest national park in the USA?</dt>-->
+<!--            <dd class="invisible">Hot Springs National Park</dd>-->
+<!--            <br>-->
+<!--            <dt>National park with greatest biodiversity.</dt>-->
+<!--            <dd class="invisible">Great Smoky Mountains</dd>-->
+<!--            <br>-->
+<!--            <dt>National park with most buffalo USA?</dt>-->
+<!--            <dd class="invisible">Yellowstone National Park</dd>-->
+<!--            <br>-->
+<!--            <dt>How many people visit the national parks? (2019)</dt>-->
+<!--            <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.</dd>-->
+<!--            <br>-->
+<!--            <dt>What is the most-visited national park?</dt>-->
+<!--            <dd class="invisible">Golden Gate National Recreation Area</dd>-->
+<!--            <br>-->
+<!--            <dt>How many people visited Golden Gate National Recreation Area in 2019?</dt>-->
+<!--            <dd class="invisible">15 million</dd>-->
+<!--            <br>-->
+<!--            <dt>What was the first national park?</dt>-->
+<!--            <dd class="invisible">Yellowstone (Wyoming, Montana, Idaho)</dd>-->
+<!--            <br>-->
+<!--            <dt>Which national park has the deepest lake in the U.S.?</dt>-->
+<!--            <dd class="invisible">Crater Lake (Oregon)</dd>-->
+<!--            <br>-->
+<!--            <dt>What causes the blue haze for which Great Smoky Mountains National Park is named?</dt>-->
+<!--            <dd class="invisible">Plants</dd>-->
+<!--        </dl>-->
+<!--        <section id="list">-->
+<!--            <h3 class="rec" id="bb">Big Bend</h3>-->
+<!--            <ul id="bend" class="park">-->
+<!--                <li>Big Bend National Park lies in the Central time zone</li>-->
+<!--                <li>Big Bend was made a national park on June 20, 1935</li>-->
+<!--                <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>-->
+<!--                <li>Big Bend National Park lies in the Central time zone</li>-->
+<!--            </ul>-->
+<!--            <h3 class="rec" id="hs">Hot Springs National Park</h3>-->
+<!--            <ul id="spring" class="park">-->
+<!--                <li>Hot Springs National Park covers a total area of 5,550 acres</li>-->
+<!--                <li>Hot Springs National Park lies in the Central time zone</li>-->
+<!--                <li>There is no entrance fee for Hot Springs National Park</li>-->
+<!--                <li>The area was first protected in 1832 as Hot Springs Reservation.</li>-->
+<!--            </ul>-->
+<!--            <h3 class="rec" id="rw">Redwood National Park</h3>-->
+<!--            <ul id="redwood" class="park">-->
+<!--                <li>Over 1.5 million people visit Redwood National and State Parks annually.</li>-->
+<!--                <li>The first Redwood trees pre-date humans, spiders, and flowers, first appearing over 240 million-->
+<!--                    years ago during the time of the dinosaurs.-->
+<!--                </li>-->
+<!--                <li>Redwood was made a national park on October 2, 1968</li>-->
+<!--                <li>Redwood National Park lies in the Pacific time zone</li>-->
+<!--            </ul>-->
+<!--            <button id="highlight">Click to highlight</button>-->
+<!--            <button id="traversing">Click</button>-->
+<!--        </section>-->
+<!--    </section>-->
+<!--    &lt;!&ndash;    Exercises&ndash;&gt;-->
+<!--    &lt;!&ndash;    Create a new file named jquery_faq.html. Commit all changes to GitHub.&ndash;&gt;-->
+<!--    &lt;!&ndash;    In a HTML structure, create a definition list containing 10 FAQs about national parks.&ndash;&gt;-->
+<!--    &lt;!&ndash;    Add a class to all dd elements named invisible.&ndash;&gt;-->
+<!--    &lt;!&ndash;    Create some CSS rules that sets elements with the invisible class to visibility: hidden;.&ndash;&gt;-->
+<!--    &lt;!&ndash;    Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.&ndash;&gt;-->
+<!--    &lt;!&ndash;    Bonus&ndash;&gt;-->
+<!--    &lt;!&ndash;    When any of the dt elements is clicked, the element that was clicked should be highlighted.&ndash;&gt;-->
+<!--    &lt;!&ndash; jQuery and bootstrap &ndash;&gt;-->
+<!--    <script src="js/jquery-2.2.4.js"></script>-->
+<!--    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!--    <script>-->
+<!--        // Show Answers-->
+<!--        $(document).ready(function () {-->
+<!--            $("#btn").click(function () {-->
+<!--                $("dd").toggleClass("invisible").toggleClass("visible");-->
+<!--            });-->
+<!--            // $("dd").addClass("invisible");-->
+<!--            // $('#toggle').click(function(){-->
+<!--            //    $("dd").toggleClass("invisible");-->
+<!--            // });-->
+<!--            // Highlight dt element-->
+<!--            // $("dt").click(function () {-->
+<!--            //     $(this).toggleClass("highlighted");-->
+<!--            // });-->
+<!--            $("#highlight").click(function () {-->
+<!--                $('.park').last().children().toggleClass('highlighted');-->
+<!--            });-->
+<!--            // Exercises-->
+<!--            // Open the file named jquery_faq.html for editing. Commit all changes to GitHub.-->
+<!--            //-->
+<!--            //     Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.-->
+<!--            //     Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+<!--            $("#traversing").click(function () {-->
+<!--                $("ul li:nth-last-child(1)").addClass('highlighted');-->
+<!--            });-->
+<!--            //     When any list item is clicked, first li of the parent ul should have a font color of blue.-->
+<!--            $("li").click(function () {-->
+<!--                $(this).parent().children().first().addClass('blue');-->
+<!--            });-->
+<!--            //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.-->
+<!--            // $("h3").click(function () {-->
+<!--            //     $(this).next().children('li').addClass("font-weight", "bold");-->
+<!--            // });-->
+<!--            $("#bb").click(function () {-->
+<!--                $('#bend').children().css('font-weight', 'bold');-->
+<!--            });-->
+<!--            $("#hs").click(function () {-->
+<!--                $('#spring').children().css('font-weight', 'bold');-->
+<!--            });-->
+<!--            $("#rw").click(function () {-->
+<!--                $('#redwood').children().css('font-weight', 'bold');-->
+<!--            });-->
+<!--            // At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div                         element.-->
+<!--            $('#x').click(function() {-->
+<!--                $('#news').hide();-->
+<!--            });-->
+<!--            //     The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.-->
+<!--            $('h3').click(function() {-->
+<!--                $('li').slideToggle(1000);-->
+<!--            });-->
+<!--            //     After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to register for the site.-->
+<!--            -->
+<!--            //     As always, make sure you are adding, committing and pushing to GitHub.-->
 
-
-
+<!--        });-->
+<!--    </script>-->
+<!--</main>-->
+<!--</body>-->
+<!--</html>-->
