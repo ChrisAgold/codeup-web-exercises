@@ -97,7 +97,6 @@ $.ajax("https://hookb.in/VGdRZoMaYbSE22bwzXqr",
 
 //Notice that .done and .fail will run one or the other dependent on the outcome, they are exclusive to each other
 
-
 // Putting our ideas into some motion:
 //Our user wants to CLICK A BUTTON and have a RANDOM RECIPE show to them in the view
 //
@@ -112,7 +111,6 @@ $.ajax("https://hookb.in/VGdRZoMaYbSE22bwzXqr",
     //     + "<p>" + data.recipes[0].summary + "</p>"
     //     + "<h4>Instructions</h4>"
     //     + "<p>" + data.recipes[0].instructions + "</p>")
-
 //     })
 // })
 
@@ -135,3 +133,5 @@ $.ajax("https://hookb.in/VGdRZoMaYbSE22bwzXqr",
         })
     })
 }
+
+
