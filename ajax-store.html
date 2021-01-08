@@ -46,6 +46,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refresh">Refresh our inventory</button>
 <script src="./ajax-store_files/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script>
@@ -60,19 +61,62 @@
         //     console.log(data);
         // });
         // $.ajax("data/inventory.json").done(function (data){})
-        $.get("data/inventory.json", {
-        }).done(function(data, status) {
-            console.log("Status: " + status + ", Data: " + data);
+        // $.get("data/inventory.json", {
+        // }).done(function(data, status) {
+        //     console.log("Status: " + status + ", Data: " + data);
+        // });
+
+        // console the object //
+        // $.ajax("data/inventory.json").done(function (data){
+        //     console.log(data);
+        // });
+
+        $.ajax("data/inventory.json").done(function (data) {
+            let HTML = "";
+            data.forEach(function (tool) {
+                console.log(tool);
+                // create table for data //
+                HTML = "<tr>"
+                    + "<td>" + tool.title + "</td>"
+                    + "<td>" + tool.quantity + "</td>" // show number of each tool
+                    + "<td>" + tool.price + "</td>"
+                    + "<td>" + tool.categories + "</td>"
+                    + "</tr>";
+
+                $("#insertProducts").append(HTML);
+            });
         });
 
-function fetch() {
-    $.get("data/inventory.json").done(function(data) {
-        console.log(data);
-        data.forEach(function(tool) {
-            console.log(tool);
+        // Refresh table (question 5) //
+        $("#refresh").click(function() {
+            // prevent repeating products
+            $("#insertProducts").empty();
+            // adding products function
+            $.ajax("data/inventory.json").done(function (data) {
+                let HTML = "";
+                data.forEach(function (tool) {
+                    console.log(tool);
+                    // create table for data //
+                    HTML = "<tr>"
+                        + "<td>" + tool.title + "</td>"
+                        + "<td>" + tool.quantity + "</td>" // show number of each tool
+                        + "<td>" + tool.price + "</td>"
+                        + "<td>" + tool.categories + "</td>"
+                        + "</tr>";
+
+                    $("#insertProducts").append(HTML);
+                });
+            });
         });
-    });
-}
+
+        function fetch() {
+            $.get("data/inventory.json").done(function (data) {
+                console.log(data);
+                data.forEach(function (tool) {
+                    console.log(tool);
+                });
+            });
+        }
 
         // $("#refresh-button").on("click", fetch); fetch
         // TODO: Take the data from inventory.json and append it to the products table

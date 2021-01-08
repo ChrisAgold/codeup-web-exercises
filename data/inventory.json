@@ -33,5 +33,24 @@
       "tool"
     ],
     "price": 10
+  },
+  {
+    "title": "Hammerdrills",
+    "quantity": 25,
+    "categories": [
+      "tool",
+      "powered"
+    ],
+    "price": 98
+  },
+  {
+    "title": "Sawsall",
+    "quantity": 3,
+    "categories": [
+      "tool",
+      "powered",
+      "wireless"
+    ],
+    "price": 160
   }
 ]

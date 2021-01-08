@@ -107,4 +107,21 @@ input[type='text'] {
     border-radius: 25px;
 }
 
+table{
+    color: #333333;
+    font-family: Helvetical, Arial, sans-serif;
+}
+
+th{
+    background: #4aa1f3;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+td{
+    background: #FAFAFA;
+    text-align: center;
+    font-size: 18px;
+}
 

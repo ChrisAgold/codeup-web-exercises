@@ -242,8 +242,6 @@ var map = new mapboxgl.Map({
 // adds zoom controls on the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-
-
 var marker = new mapboxgl.Marker({
     draggable: true
 
@@ -252,7 +250,6 @@ var marker = new mapboxgl.Marker({
     .addTo(map)
     .setDraggable(true)
     .on('dragend', onDragEnd);
-
 
 // Drag Marker Function //
 function onDragEnd() {
@@ -269,6 +266,3 @@ function onDragEnd() {
             map.set
         });
 }
-
-
-
