@@ -4,6 +4,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Online Store</title>
+
+
+
+<style>
+    .posiInventory {
+        color: green;
+    }
+
+    .itemTitle {
+        font-family: sans-serif;
+    }
+</style>
+
+
+
+
     <script data-dapp-detection="">!function () {
         let e = !1;
 
@@ -71,21 +87,21 @@
         //     console.log(data);
         // });
 
-        $.ajax("data/inventory.json").done(function (data) {
-            let HTML = "";
-            data.forEach(function (tool) {
-                console.log(tool);
-                // create table for data //
-                HTML = "<tr>"
-                    + "<td>" + tool.title + "</td>"
-                    + "<td>" + tool.quantity + "</td>" // show number of each tool
-                    + "<td>" + tool.price + "</td>"
-                    + "<td>" + tool.categories + "</td>"
-                    + "</tr>";
-
-                $("#insertProducts").append(HTML);
-            });
-        });
+        // $.ajax("data/inventory.json").done(function (data) {
+        //     let HTML = "";
+        //     data.forEach(function (tool) {
+        //         console.log(tool);
+        //         // create table for data //
+        //         HTML = "<tr>"
+        //             + "<td>" + tool.title + "</td>"
+        //             + "<td class='posiInventory'>" + tool.quantity + "</td>" // show number of each tool
+        //             + "<td>" + tool.price + "</td>"
+        //             + "<td>" + tool.categories + "</td>"
+        //             + "</tr>";
+        //
+        //         $("#insertProducts").append(HTML);
+        //     });
+        // });
 
         // Refresh table (question 5) //
         $("#refresh").click(function() {
@@ -98,8 +114,8 @@
                     console.log(tool);
                     // create table for data //
                     HTML = "<tr>"
-                        + "<td>" + tool.title + "</td>"
-                        + "<td>" + tool.quantity + "</td>" // show number of each tool
+                        + "<td class='itemTitle'>" + tool.title + "</td>"
+                        + "<td class='posiInventory'>" + tool.quantity + "</td>" // show number of each tool
                         + "<td>" + tool.price + "</td>"
                         + "<td>" + tool.categories + "</td>"
                         + "</tr>";
@@ -109,14 +125,14 @@
             });
         });
 
-        function fetch() {
-            $.get("data/inventory.json").done(function (data) {
-                console.log(data);
-                data.forEach(function (tool) {
-                    console.log(tool);
-                });
-            });
-        }
+        // function fetch() {
+        //     $.get("data/inventory.json").done(function (data) {
+        //         console.log(data);
+        //         data.forEach(function (tool) {
+        //             console.log(tool);
+        //         });
+        //     });
+        // }
 
         // $("#refresh-button").on("click", fetch); fetch
         // TODO: Take the data from inventory.json and append it to the products table
