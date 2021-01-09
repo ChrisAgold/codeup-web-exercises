@@ -94,14 +94,10 @@ function getForecast() {
                     table += "<td>" + data.list[i].humidity + "%</td>";
                     table += "<td>" + data.list[i].speed + "m/s</td>";
                     table += "<td>" + data.list[i].deg + "&deg;</td>";
-
-
                     table += "</tr>";
                 }
-
                 $("#forecastWeather").html(table);
                 $("#header").html(header);
-
                 $("#city").val('');
                 $("#days").val('')
 // method to move marker to location in search box
@@ -109,17 +105,11 @@ function getForecast() {
                 var lat = data.city.coord.lon
                 map.flyTo({center: [lat, long]})
                 map.set
-
-
             }
-
-
         });
-
     } else {
         $("#error").html("<div class='alert alert-danger' id='errorCity'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>City field cannot be empty</div>");
     }
-
 }
 
 // Dragging Marker //
@@ -142,21 +132,11 @@ function updateTable(data) {
         table += "<td>" + data.list[i].humidity + "%</td>";
         table += "<td>" + data.list[i].speed + "m/s</td>";
         table += "<td>" + data.list[i].deg + "&deg;</td>";
-
-
         table += "</tr>";
     }
-
     $("#forecastWeather").html(table);
     $("#header").html(header);
 
     $("#city").val('');
     $("#days").val('')
-
 }
-
-
-
-
-
-
