@@ -114,3 +114,4 @@ for(let developer of developers) {
     list += `<li>${developer}</li>` // es6
 }
 list += '</ul>';
+console.log(list);
