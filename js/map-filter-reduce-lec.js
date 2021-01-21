@@ -71,7 +71,6 @@ $(document).ready(function () {
 
     });
 
-
     /********************************* 2 *********************************/
 
         //  2. Using map()
@@ -80,11 +79,9 @@ $(document).ready(function () {
         });
     console.log(filter2011);
 
-
     /********************************* 3 *********************************/
 
     //  3. Use ES6
-
 
     /**************************** createList() ***************************/
     /*********** creates an HTML list from an array of strings ***********/
@@ -95,7 +92,6 @@ $(document).ready(function () {
         });
         return html;
     }
-
 
     // *****************   ******     ******************//
     // **************  TODO: FILTER() ******************//
@@ -120,13 +116,13 @@ $(document).ready(function () {
     /********************* END function to get year from string ***************************/
 
     /********************************* 1 *********************************/
-    //  1. Use forEach()
+        //  1. Use forEach()
     let forEach2011 = [];
-    mbpModels.forEach(function(mbp) {
+    mbpModels.forEach(function (mbp) {
         // get the current year
         let thisModelYear = getYear(mbp.year); // 2006 for the first element in the array
 
-        if(thisModelYear >= 2011) {
+        if (thisModelYear >= 2011) {
             // list the description and the year string in the forEach2011 array
             forEach2011.push(mbp.desc + ' <strong>(' + mbp.year + ')</strong>');
             // i.e. "Apple MacBook Pro 15-Inch "Core Duo" 2.0 (2006)"
@@ -134,8 +130,8 @@ $(document).ready(function () {
     });
     $("#filterForEach").html(createList(forEach2011));
     /********************************* 2 *********************************/
-    //  2. Use filter()
-    let filter2011 = mbpModels.filter(function(mbp) {
+        //  2. Use filter()
+    let filter2011 = mbpModels.filter(function (mbp) {
             return getYear(mbp.year) >= 2011;
         });
     console.table(filter2011);
@@ -156,19 +152,19 @@ $(document).ready(function () {
     /********************************* 1 *********************************/
         //  1. Use forEach()
     let totalValueFE = 0;
-    mbpModels.forEach(function(mbp) {
+    mbpModels.forEach(function (mbp) {
         totalValueFE += mbp.price;
     })
     console.log("Total forEach: " + totalValueFE);
     $("#reduceForEach").html(commaThousands(totalValueFE));
     /********************************* 2 *********************************/
-    //  2. Use reduce()
+        //  2. Use reduce()
     let totalValueReduce = mbpModels.reduce(function (total, mbp) {
             return total += mbp.price; // i.e. 0 + 3199 - first iteration through
         }, 0);
     console.log("Total Value Reduced: " + totalValueReduce);
     /********************************* 3 *********************************/
-    //  3. Use ES6
+        //  3. Use ES6
     let totalValueES6 = mbpModels.reduce((total, mbp) => total + mbp.price, 0);
     console.log("Total Value ES6: " + commaThousands(totalValueES6));
 
